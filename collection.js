@@ -137,20 +137,26 @@ body.style.marginBottom = "10rem";
 
 const collectionTitle = document.querySelector(".collection-title");
 collectionTitle.style.textAlign = "left ";
-collectionTitle.style.maxWidth = "100rem";
+collectionTitle.style.with = "100vw";
+collectionTitle.style.maxWidth = "98rem";
 collectionTitle.style.margin = "0 auto";
 collectionTitle.style.color = "white";
+collectionTitle.style.background = "rgba(255, 255, 255, .3";
+collectionTitle.style.borderRadius = ".5rem";
 collectionTitle.style.fontWeight = "300";
 collectionTitle.style.fontSize = "4.4rem";
-
 collectionTitle.style.padding = "1rem 1rem";
+collectionTitle.style.position = "sticky";
+collectionTitle.style.top = "0";
+collectionTitle.style.zIndex = "1";
+collectionTitle.style.backdropFilter = "blur(5px)";
 
 const recordsContainer = document.getElementById("container");
 recordsContainer.style.margin = "0 auto";
 recordsContainer.style.display = "flex";
 recordsContainer.style.flexWrap = "wrap";
 recordsContainer.style.justifyContent = "center";
-recordsContainer.style.margin = "0 auto";
+recordsContainer.style.margin = "1rem auto";
 recordsContainer.style.maxWidth = "100rem";
 
 let backgroundColor =
@@ -191,7 +197,7 @@ records.forEach((record) => {
   card.style.border = "1px solid #57007b";
   card.style.borderRadius = "10px";
   card.style.boxShadow = "0 4px 8px rgba(0, 0, 0, 0.1)";
-  card.style.margin = "1rem";
+  card.style.margin = "1rem 1rem";
   card.style.boxShadow = " 0px 0px 269px 0 rgba(160,0,240,0.5)";
 
   // ? -> Create content div
