@@ -118,50 +118,69 @@ const records = [
     label: ["Flightless"],
     spotify: "https://open.spotify.com/artist/3NqV2DJoAWsjl787bWaHW7",
   },
+  {
+    cover: "./img/colyn-running.jpeg",
+    band: "Colyn",
+    album: "Running | Single",
+    year: 2020,
+    genre: ["progressive house"],
+    label: ["Afterlife"],
+    spotify: "https://open.spotify.com/track/1jOin5KD6ZaYomFtkiNlvZ",
+  },
+  {
+    cover: "./img/huntemann-tr2.jpeg",
+    band: "Oliver Huntemann",
+    album: "Compilation",
+    year: ["2004-2024"],
+    genre: ["techno"],
+    label: ["senso sound"],
+    spotify: "https://open.spotify.com/artist/0NBGssQpgDczTsVEp4pCbR",
+  },
+  {
+    cover: "./img/Wehbba-sharpshooter.jpeg",
+    band: "Wehbba",
+    album: "Straight Lines and Sharp Corners",
+    year: 2020,
+    genre: ["techno"],
+    label: ["Drumcode"],
+    spotify: "https://open.spotify.com/album/3neiWVDguv93enccgFJf9y",
+  },
+  {
+    cover: "./img/cola.jpeg",
+    band: "CamelPhat",
+    album: "Compilation",
+    year: 2018,
+    genre: ["electronic"],
+    label: ["	We Play"],
+    spotify: "https://open.spotify.com/artist/240wlM8vDrf6S4zCyzGj2W",
+  },
+  {
+    cover: "./img/what-else.jpeg",
+    band: "ARTBAT | Röyksopp",
+    album: "What Else Is There ?",
+    year: 2021,
+    genre: ["progressive house"],
+    label: ["DOG TRIUMPH"],
+    spotify: "https://open.spotify.com/track/2j2xHXHZgMf5o8SRpIEjVQ",
+  },
 ];
 
 const html = document.querySelector("html");
 html.style.height = "100%";
 
+//  ? Body Styling
 const body = document.body;
 body.style.color = "white";
-body.style.fontFamily = "Roboto";
-body.style.margin = "0";
+body.style.maxWidth = "90rem";
+body.style.margin = "0 auto";
 body.style.padding = "0";
 body.style.background =
   "linear-gradient(106deg, rgba(32,2,78,0.958420868347339) 0%, rgba(15,15,15,1) 100%)";
 body.style.backgroundRepeat = "no-repeat";
 body.style.height = "100vh";
 body.style.backgroundAttachment = "fixed";
-body.style.marginBottom = "10rem";
 
-const collectionTitle = document.querySelector(".collection-title");
-collectionTitle.style.textAlign = "left ";
-collectionTitle.style.with = "100vw";
-collectionTitle.style.maxWidth = "98rem";
-collectionTitle.style.margin = "0 auto";
-collectionTitle.style.color = "white";
-collectionTitle.style.background = "rgba(255, 255, 255, .3";
-collectionTitle.style.borderRadius = ".5rem";
-collectionTitle.style.fontWeight = "300";
-collectionTitle.style.fontSize = "4.4rem";
-collectionTitle.style.padding = "1rem 1rem";
-collectionTitle.style.position = "sticky";
-collectionTitle.style.top = "0";
-collectionTitle.style.zIndex = "1";
-collectionTitle.style.backdropFilter = "blur(5px)";
-
-const recordsContainer = document.getElementById("container");
-recordsContainer.style.margin = "0 auto";
-recordsContainer.style.display = "flex";
-recordsContainer.style.flexWrap = "wrap";
-recordsContainer.style.justifyContent = "center";
-recordsContainer.style.margin = "1rem auto";
-recordsContainer.style.maxWidth = "100rem";
-
-let backgroundColor =
-  "linear-gradient(-45deg, rgba(150,2,199,10) 0%, rgba(36,4,173,0.958420868347339) 46%, rgba(46,0,101,10)";
-
+body.style.fontFamily = "Roboto";
 const h1Size = "1.5rem";
 const h1Weight = "bold";
 
@@ -183,6 +202,46 @@ const h6Weight = "200";
 const pSize = "0.8rem";
 const pWeight = "normal";
 
+// ? Header Styling
+const headerDiv = document.querySelector(".header");
+const logo = document.createElement("img");
+const title = document.createElement("h1");
+title.textContent = "collection";
+
+logo.src = "./img/mc-logo.png";
+logo.style.width = "2rem";
+logo.style.height = "2rem";
+
+headerDiv.style.width = "100%";
+headerDiv.style.display = "flex";
+headerDiv.style.alignItems = "center";
+headerDiv.style.justifyContent = "center ";
+headerDiv.style.color = "white";
+headerDiv.style.fontSize = "1rem";
+headerDiv.style.padding = "1rem 1rem";
+headerDiv.style.position = "sticky";
+headerDiv.style.top = "0";
+headerDiv.style.zIndex = "1";
+headerDiv.style.textShadow = " 0 .1rem 1rem darkgray";
+headerDiv.style.backdropFilter = "blur(10px)";
+
+headerDiv.appendChild(logo);
+headerDiv.appendChild(title);
+
+// ? Container Styling
+const recordsContainer = document.getElementById("container");
+recordsContainer.style.margin = "0 0";
+recordsContainer.style.display = "flex";
+recordsContainer.style.flexWrap = "wrap";
+recordsContainer.style.justifyContent = "center";
+recordsContainer.style.margin = "1rem auto";
+recordsContainer.style.maxWidth = "100rem";
+
+let backgroundColor =
+  "linear-gradient(-45deg, rgba(150,2,199,10) 0%, rgba(36,4,173,0.958420868347339) 46%, rgba(46,0,101,10)";
+
+
+
 const contentPadding = "1rem 3rem 0 1rem";
 
 records.forEach((record) => {
@@ -197,7 +256,7 @@ records.forEach((record) => {
   card.style.border = "1px solid #57007b";
   card.style.borderRadius = "10px";
   card.style.boxShadow = "0 4px 8px rgba(0, 0, 0, 0.1)";
-  card.style.margin = "1rem 1rem";
+  card.style.margin = "0.5rem 0.5rem";
   card.style.boxShadow = " 0px 0px 269px 0 rgba(160,0,240,0.5)";
 
   // ? -> Create content div
@@ -219,7 +278,8 @@ records.forEach((record) => {
   // ? -> Album title
   const albumTitle = document.createElement("h2");
   albumTitle.textContent = record.album;
-  albumTitle.style.padding = contentPadding;
+  albumTitle.style.padding = "0 1rem";
+  albumTitle.style.margin = " 0.5rem auto";
   albumTitle.style.fontSize = h2Size;
   albumTitle.style.fontWeight = h2Weight;
 
@@ -227,25 +287,24 @@ records.forEach((record) => {
   const band = document.createElement("p");
   band.textContent = `${record.band}`;
 
-  band.style.padding = "0.2rem 1rem 0";
+  band.style.padding = "0 1rem";
   band.style.fontSize = h2Size;
   band.style.fontWeight = pWeight;
 
   // ? -> Create year
   const year = document.createElement("p");
-  year.textContent = `year: ${record.year}`;
+  year.textContent = `${record.year}`;
 
-  year.style.padding = ".2rem  1rem 0 ";
+  year.style.padding = "0 1rem ";
+  year.style.margin = "0.5rem auto";
   year.style.fontSize = h5Size;
   year.style.fontWeight = h3Weight;
 
   // ? -> Label
   const label = document.createElement("p");
-  label.textContent = `label: ${record.label}`;
 
-  label.style.padding = "0 0 0 1rem";
   label.style.fontSize = h5Size;
-  label.style.fontWeight = "300";
+  label.style.background = label.style.fontWeight = "300";
   label.style.opacity = ".8";
 
   // ? -> Create genre
