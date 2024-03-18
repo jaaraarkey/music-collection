@@ -121,7 +121,7 @@ const records = [
   {
     cover: "./img/colyn-running.jpeg",
     band: "Colyn",
-    album: "Running | Single",
+    album: "Running",
     year: 2020,
     genre: ["progressive house"],
     label: ["Afterlife"],
@@ -239,8 +239,6 @@ recordsContainer.style.maxWidth = "100rem";
 
 let backgroundColor =
   "linear-gradient(-45deg, rgba(150,2,199,10) 0%, rgba(36,4,173,0.958420868347339) 46%, rgba(46,0,101,10)";
-
-
 
 const contentPadding = "1rem 3rem 0 1rem";
 
