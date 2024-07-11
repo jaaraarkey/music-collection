@@ -7,7 +7,7 @@ This is a dynamically rendered web page showcasing a collection of music cards, 
 
 ## Live Demo
 
-Check out the live demo: https://jaaraarkey.github.io/music-collection/.
+Check out the live demo: https://jaaraarkey.github.io/music-collection/
 
 ## Features
 
