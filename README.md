@@ -3,7 +3,9 @@ Sure! Here's a sample README.md file for your Music Card Collection project:
 ```markdown
 # Music Card Collection
 
-This is a dynamically rendered web page showcasing a collection of music cards, created using JavaScript and HTML. Each card includes links to Spotify for easy access to the music.
+This is a dynamically rendered web page showcasing a collection of music cards,
+created using JavaScript and HTML. 
+Each card includes links to Spotify for easy access to the music.
 
 ## Live Demo
 
