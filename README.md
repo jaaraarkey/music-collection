@@ -1,5 +1,3 @@
-Sure! Here's a sample README.md file for your Music Card Collection project:
-
 ```markdown
 # Music Card Collection
 
@@ -52,11 +50,7 @@ This project is licensed under the MIT License.
 ## Acknowledgements
 
 - Special thanks to Spotify for providing an extensive music library.
-- Inspired by various music collection web projects.
-
-## Contact
-
-For any inquiries or feedback, please contact [your_email@example.com].
+- Inspired by various music collection web.
 
 ```
 
